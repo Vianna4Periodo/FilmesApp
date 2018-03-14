@@ -15,6 +15,8 @@ public class Database {
     public static ArrayList<GeneroFilme> listaGeneros;
 
     static {
+        listaGeneros = new ArrayList<>();
+        listaUsuarios = new ArrayList<>();
         listaGeneros.add(new GeneroFilme(1, "Ação"));
         listaGeneros.add(new GeneroFilme(2, "Drama"));
         listaGeneros.add(new GeneroFilme(3, "Comédia"));
