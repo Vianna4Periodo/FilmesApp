@@ -2,12 +2,14 @@ package com.example.aluno.filmesapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import com.example.aluno.filmesapp.model.GeneroFilme;
+import com.example.aluno.filmesapp.model.Usuario;
 import com.example.aluno.filmesapp.util.data.Database;
 
 public class activity_cadastro extends AppCompatActivity {
@@ -22,6 +24,16 @@ public class activity_cadastro extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro);
 
         binding();
+
+        preencheSpinnergenero();
+
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Usuario u = new Usuario();
+                UsuarioDAO.gravar(u);
+            }
+        });
     }
 
     private void preencheSpinnergenero(){
