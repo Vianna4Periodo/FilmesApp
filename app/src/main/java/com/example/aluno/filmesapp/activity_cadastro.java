@@ -30,7 +30,11 @@ public class activity_cadastro extends AppCompatActivity {
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Usuario u = new Usuario();
+                Usuario u = new Usuario(1, nome.getText().toString(),
+                        login.getText().toString(),
+                        senha.getText().toString(),
+                        Database.listaGeneros.get(genero.getSelectedItemPosition()),
+                        false);
                 UsuarioDAO.gravar(u);
             }
         });
