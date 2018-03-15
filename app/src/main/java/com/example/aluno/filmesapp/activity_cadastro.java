@@ -10,7 +10,6 @@ import android.widget.Spinner;
 
 import com.example.aluno.filmesapp.model.GeneroFilme;
 import com.example.aluno.filmesapp.model.Usuario;
-import com.example.aluno.filmesapp.util.data.Database;
 
 public class activity_cadastro extends AppCompatActivity {
 
@@ -33,17 +32,25 @@ public class activity_cadastro extends AppCompatActivity {
                 Usuario u = new Usuario(1, nome.getText().toString(),
                         login.getText().toString(),
                         senha.getText().toString(),
-                        Database.listaGeneros.get(genero.getSelectedItemPosition()),
+                        GeneroDAO.get(genero.getSelectedItemPosition()),
                         false);
                 UsuarioDAO.gravar(u);
+            }
+        });
+
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(2);
+                finish();
             }
         });
     }
 
     private void preencheSpinnergenero(){
-        String[] generos = new String[Database.listaGeneros.size()];
+        String[] generos = new String[GeneroDAO.count()];
         int idx = 0;
-        for(GeneroFilme g: Database.listaGeneros){
+        for(GeneroFilme g: GeneroDAO.findAll()){
             generos[idx++]=g.getDescricao();
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
