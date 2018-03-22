@@ -1,15 +1,16 @@
 package com.example.aluno.filmesapp.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by aluno on 13/03/2018.
  */
 
-public class Usuario {
+public class Usuario implements Serializable {
 
     private int id;
-    private String nome, login, senha;
+    private String nome,login,senha;
     private GeneroFilme genero;
     private boolean ehAdministrador;
     private ArrayList<Filme> filmes;
@@ -24,7 +25,7 @@ public class Usuario {
         this.senha = senha;
         this.genero = genero;
         this.ehAdministrador = ehAdministrador;
-        this.filmes = new ArrayList<Filme>();
+        this.filmes = new ArrayList<>();
     }
 
     public int getId() {

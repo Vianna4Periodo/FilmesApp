@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:scaleType="matrix"
-            app:srcCompat="@drawable/homem" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <EditText
-                android:id="@+id/edtLogin"
+                android:id="@+id/edtCadLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -54,7 +54,7 @@
                 android:text="Senha" />
 
             <EditText
-                android:id="@+id/edtSenha"
+                android:id="@+id/edtCadSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -79,7 +79,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <EditText
-            android:id="@+id/edtNome"
+            android:id="@+id/edtCadNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -88,13 +88,13 @@
             android:text="Name" />
 
         <TextView
-            android:id="@+id/spnGenero"
+            android:id="@+id/edtCadGenero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gênero" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spnCadGenero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -104,22 +104,22 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/btnVoltar"
+                android:id="@+id/imgcadVoltar"
                 android:layout_width="154dp"
                 android:layout_height="98dp"
                 android:layout_weight="0"
                 android:backgroundTint="@android:color/transparent"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/back2" />
+                app:srcCompat="@mipmap/ic_launcher" />
 
             <ImageButton
-                android:id="@+id/btnSalvar"
+                android:id="@+id/imgCadSalvar"
                 android:layout_width="127dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/save" />
+                app:srcCompat="@mipmap/ic_launcher" />
         </LinearLayout>
 
     </LinearLayout>
